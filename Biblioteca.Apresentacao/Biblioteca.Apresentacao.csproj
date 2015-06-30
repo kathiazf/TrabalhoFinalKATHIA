@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC005DA3-6771-42FA-98CB-167EEA53CE98}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Uniplac.eAgenda.WindowsApp</RootNamespace>
+    <AssemblyName>Uniplac.eAgenda.WindowsApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Biblioteca.Apresentacao.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\AutorForms\AutorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AutorForms\AutorControl.Designer.cs">
+      <DependentUpon>AutorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AutorForms\AutorDataManagerImpl.cs" />
+    <Compile Include="Controls\AutorForms\AutorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AutorForms\AutorDialog.Designer.cs">
+      <DependentUpon>AutorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LivroForms\LivroDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\LivroForms\LivroDialog.Designer.cs">
+      <DependentUpon>LivroDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LivroForms\LivroControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LivroForms\LivroControl.Designer.cs">
+      <DependentUpon>LivroControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LivroForms\LivroDataManagerImpl.cs" />
+    <Compile Include="Controls\Shared\IDataManager.cs" />
+    <Compile Include="Controls\Shared\ToolTipMessage.cs" />
+    <Compile Include="Controls\UsuarioForms\UsuarioControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UsuarioForms\UsuarioControl.Designer.cs">
+      <DependentUpon>UsuarioControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UsuarioForms\UsuarioDataManagerImpl.cs" />
+    <Compile Include="Controls\UsuarioForms\UsuarioDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\UsuarioForms\UsuarioDialog.Designer.cs">
+      <DependentUpon>UsuarioDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AutorForms\AutorControl.resx">
+      <DependentUpon>AutorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AutorForms\AutorDialog.resx">
+      <DependentUpon>AutorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LivroForms\LivroDialog.resx">
+      <DependentUpon>LivroDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LivroForms\LivroControl.resx">
+      <DependentUpon>LivroControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UsuarioForms\UsuarioControl.resx">
+      <DependentUpon>UsuarioControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UsuarioForms\UsuarioDialog.resx">
+      <DependentUpon>UsuarioDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <Fakes Include="Fakes\Biblioteca.Infra.Data.fakes" />
+    <Fakes Include="Fakes\Uniplac.eAgenda.Infraestrutura.Mem.fakes" />
+    <Fakes Include="Fakes\Uniplac.eAgenda.Modelo.fakes" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Biblioteca.App\Biblioteca.App.csproj">
+      <Project>{32ec9a96-7f05-4d1e-84fb-0b67e9e23c1d}</Project>
+      <Name>Biblioteca.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Dominio\Biblioteca.Dominio.csproj">
+      <Project>{eaea76ae-5831-4e4e-bba7-8ed998b3dd82}</Project>
+      <Name>Biblioteca.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Biblioteca.Infra\Biblioteca.Infra.csproj">
+      <Project>{60ace837-ed6d-46f4-a6bd-eb0966072283}</Project>
+      <Name>Biblioteca.Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infra.Data\Infra.Data.csproj">
+      <Project>{d780fc8f-fccd-4019-a8d2-14ab19b6e05c}</Project>
+      <Name>Infra.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.eAgenda.Infraestrutura.Data\Uniplac.eAgenda.Infraestrutura.Dao.csproj">
+      <Project>{63B2F50D-F1CA-4A55-92CB-1A211233243F}</Project>
+      <Name>Uniplac.eAgenda.Infraestrutura.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.eAgenda.Infraestrutura.Mem\Uniplac.eAgenda.Infraestrutura.Mem.csproj">
+      <Project>{23B86BDC-186C-40B2-8E09-AB1C9252A15B}</Project>
+      <Name>Uniplac.eAgenda.Infraestrutura.Mem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Uniplac.eAgenda.Modelo\Uniplac.eAgenda.Modelo.csproj">
+      <Project>{62D7F576-F375-41FA-B999-815CDDB04F95}</Project>
+      <Name>Uniplac.eAgenda.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Symbol Pencil.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
